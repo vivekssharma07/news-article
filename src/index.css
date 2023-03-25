@@ -1,0 +1,133 @@
+body {
+  font-family: Lato;
+}
+
+input {
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+input,
+button {
+  padding: 5px 15px;
+  border-radius: 2px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ant-card-meta-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.headline-title {
+  width: 240px;
+  color: rgba(0, 0, 0, 0.88);
+  font-weight: 600;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.card-container {
+  height: 200px;
+}
+
+.more-btn {
+  text-decoration: underline;
+  font-weight: 700;
+  float: right;
+  margin-top: 3px;
+  cursor: pointer;
+}
+.back-btn {
+  color: black;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 10px;
+  cursor: pointer;
+}
+.card-detail-title {
+  color: rgba(0, 0, 0, 0.88);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.font-bold {
+  font-weight: 800;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.header-content {
+  color: rgba(0, 0, 0, 0.88);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+/* Grid View CSS Starts */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.parent {
+  list-style-type: none;
+  padding: 20px;
+  background: rgb(241 241 241);
+  border: 1px solid #fdfdfd;
+  border-radius: 5px;
+}
+.child {
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+.parent::after {
+  content: "";
+  display: block;
+  clear: both; /* to clear out the floating */
+}
+.child {
+  width: calc(
+    33.33% - 20px
+  ); /* 10px margin on the left plus 10px margin on the right */
+  float: left;
+}
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+.child {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(33.33% - 20px);
+}
+
+.parent {
+  display: grid;
+  grid-gap: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(4, calc(22.33% - 20px));
+}
+.child {
+  margin: 0; /* because we have grid-gap */
+}
+
+/* Grid View CSS Ends */
